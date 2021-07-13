@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        <table class="table w-full mt-3 mb-1">
+        <table class="table mx-auto w-1/2 mt-3 mb-1">
             <thead>
                 <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                     <th class="py-3 px-6 text-left">
