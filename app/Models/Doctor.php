@@ -25,6 +25,5 @@ class Doctor extends Model
         'postal_postal_code',
         'fax',
         'contact_number',
-
     ];
 }

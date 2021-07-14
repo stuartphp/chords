@@ -21,7 +21,21 @@ class DoctorsChild extends Component
     public $parent = 'medical.doctors';
 
     protected $rules = [
-        'item.title' => 'required'
+        'item.practice_number' => '',
+        'item.practice_name' => '',
+        'item.physical_address1' => '',
+        'item.physical_address2' => '',
+        'item.physical_suburb' => '',
+        'item.physical_town' => '',
+        'item.physical_postal_code' => '',
+        'item.physical_province' => '',
+        'item.postal_address1' => '',
+        'item.postal_address2' => '',
+        'item.postal_suburb' => '',
+        'item.postal_town' => '',
+        'item.postal_postal_code' => '',
+        'item.fax' => '',
+        'item.contact_number' => '',
     ];
 
 

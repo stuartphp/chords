@@ -11,7 +11,7 @@ class Doctors extends Component
     use WithPagination;
 
     protected $listeners = ['refresh' => '$refresh'];
-    public $sortBy = 'name';
+    public $sortBy = 'practice_number';
     public $searchTerm='';
     public $sortAsc = true;
     public $pageSize = 10;
@@ -28,10 +28,11 @@ class Doctors extends Component
     public function render()
     {
         $data = $this->query()
-            ->with('roles')
             ->when($this->searchTerm, function($q){
-                $q->where('name', 'like', '%'.$this->searchTerm.'%')
-                    ->orWhere('email', 'like', '%'.$this->searchTerm.'%');
+                $q->where('practice_number', 'like', '%'.$this->searchTerm.'%')
+                    ->orWhere('practice_name', 'like', '%'.$this->searchTerm.'%')
+                    ->orWhere('fax', 'like', '%'.$this->searchTerm.'%')
+                    ->orWhere('contact_number', 'like', '%'.$this->searchTerm.'%');
             })
             ->orderBy($this->sortBy, $this->sortAsc ? 'ASC' : 'DESC')
             ->paginate($this->pageSize);
