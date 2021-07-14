@@ -12,14 +12,26 @@
         </x-slot>
     </x-confirmation-modal>
 
-    <x-dialog-modal wire:model="confirmingItemEdition">
+    <x-dialog-modal wire:model="confirmingItemEdition" maxWidth="6xl">
         <x-slot name="title">
             Edit Record
         </x-slot>
         <x-slot name="content">
             <div class="mt-4">
-                <x-jet-label>Name</x-jet-label>
-                <x-jet-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.name" />
+                <x-jet-label>Practice Number</x-jet-label>
+                <x-jet-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.practice_number" />
+            </div>
+            <div class="mt-4">
+                <x-jet-label>Practice Name</x-jet-label>
+                <x-jet-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.practice_name" />
+            </div>
+            <div class="mt-4">
+                <x-jet-label>Fax</x-jet-label>
+                <x-jet-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.fax" />
+            </div>
+            <div class="mt-4">
+                <x-jet-label>Contact Number</x-jet-label>
+                <x-jet-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.contact_number" />
             </div>
         </x-slot>
         <x-slot name="footer">

@@ -1,9 +1,9 @@
 <div class="py-2 px-2">
     <div class="bg-white rounded-lg shadow-md p-5">
-        <div class="grid grid-cols-3 mb-2">
+        <div class="mx-auto w-1/2 grid grid-cols-3 mb-2">
             <div class="text-xl"><a href="{{ route('users-management.permissions') }}">{{ __('Permissions') }}</a>
             </div>
-            <div>
+            <div class="flex justify-center">
                 <a href="#" class="hover:text-indigo-500"
                     wire:click="$emitTo('user-manager.permissions-child', 'showCreateForm');">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -13,14 +13,14 @@
                     </svg>
                 </a>
             </div>
-            <div class="flex justify-start">
+            <div class="flex justify-end">
                 <x-page-size class="w- h-9" />
                 <x-input type="search" wire:model.debounce.300ms="searchTerm"
                     class="ml-3 bg-purple-white shadow rounded border-0 h-9" placeholder="Search..." />
             </div>
         </div>
 
-        <table class="table w-full mt-3 mb-1">
+        <table class="table mx-auto w-1/2 mt-3 mb-1">
             <thead>
                 <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                     <th class="py-3 px-6 text-left">
@@ -50,8 +50,10 @@
                 @endforeach
             </tbody>
         </table>
-
+<div class="mx-auto w-1/2">
     {{ $data->links() }}
+</div>
+
 </div>
     @livewire('user-manager.permissions-child')
 </div>

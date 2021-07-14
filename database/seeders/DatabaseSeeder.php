@@ -24,6 +24,6 @@ class DatabaseSeeder extends Seeder
             //CategorySeeder::class,
            // UnitSeeder::class
         ]);
-       
+        \App\Models\Doctor::factory(20)->create();
     }
 }
