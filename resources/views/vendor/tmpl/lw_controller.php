@@ -1,13 +1,5 @@
 <?php
 
-namespace App\Http\Livewire\Admin;
-
-use Livewire\Component;
-use Livewire\WithPagination;
-use App\Models\User;
-
-class Users extends Component
-{
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
 
@@ -45,4 +37,4 @@ class Users extends Component
     {
         return User::query();
     }
-}
+

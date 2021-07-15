@@ -45,7 +45,6 @@
                         </x-slot>
                     </x-jet-nav-link>
                     @endcan
-
                 </div>
             </div>
 

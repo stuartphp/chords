@@ -1,13 +1,5 @@
 <?php
 
-namespace App\Http\Livewire\Admin;
-
-use Livewire\Component;
-use App\Models\Category;
-
-class CategoriesChild extends Component
-{
-
     protected $listeners = [
         'showDeleteForm',
         'showCreateForm',
@@ -116,4 +108,3 @@ class CategoriesChild extends Component
         $this->primaryKey = '';
         $this->emitTo('product-units', 'refresh');
     }
-}

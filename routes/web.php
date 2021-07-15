@@ -33,5 +33,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::prefix('/medical')->name('medical.')->group(function () {
         Route::get('doctors', [App\Http\Controllers\Admin\MedicalController::class, 'doctors'])->name('doctor');
     });
+    
 });
 
